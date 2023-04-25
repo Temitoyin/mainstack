@@ -4,6 +4,10 @@ import Filter from "@/components/Filter/Filter";
 import Layout from "@/components/Layout/Layout";
 import Reports from "@/components/Reports/Reports";
 
+/**
+ * Render Layout component
+ * @returns {React.Component} renders button component
+ */
 const Home = () => {
   const [apiData, setApiData] = useState({});
   useEffect(() => {
@@ -50,10 +54,12 @@ const Home = () => {
       <main className="pb-[44px]">
         <div className="flex items-center justify-between mb-[23px]">
           <div>
-            <h1 className="text-[24px] font-semibold mb-[10px]">
+            <h1 className=" text-[18px] mb:text-[24px] font-semibold mb-[10px]">
               Good morning, Blessing ⛅️
             </h1>
-            <p className="text-[14px]">Check out your dashboard summary.</p>
+            <p className="text[12px] mb:text-[14px]">
+              Check out your dashboard summary.
+            </p>
           </div>
           <a className="text-orangeDefault text-[14px] cursor-pointer">
             View analytics

@@ -15,8 +15,8 @@ const SVG = (props) => (
     {...props}
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0.5H7V15.5H0V0.5ZM14 0.5H21V15.5H14V0.5Z"
       fill="#0A6A30"
     />

@@ -25,6 +25,11 @@ ChartJS.register(
   Legend
 );
 
+/**
+ * Render Chart component
+ * @param {Array} chartInputData the chart input data
+ * @returns {React.Component} renders button component
+ */
 const Chart = ({ chartInputData }) => {
   const [values, setValues] = useState([]);
   const [chartLabels, setChartLabels] = useState([]);
@@ -101,7 +106,7 @@ const Chart = ({ chartInputData }) => {
         </div>
       </div>
       <p className="text-[12px] text-gray500 mb-[24px]">All Time</p>
-      <p className="text-[48px] font-semibold">500</p>
+      <p className=" text-[24px] md:text-[48px] font-semibold">500</p>
       <div className="h-[75%]">
         <Line options={options} data={data} />
       </div>

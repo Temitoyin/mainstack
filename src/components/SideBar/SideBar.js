@@ -2,6 +2,11 @@ import React from "react";
 import Icon from "../Icon/icon";
 import { UserInfo } from "../UserInfo/UserInfo";
 import { sideBarData } from "./data";
+
+/**
+ * Render SideBar component
+ * @returns {React.Component} renders button component
+ */
 const SideBar = () => {
   const active = 0;
   return (
