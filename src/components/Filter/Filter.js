@@ -19,7 +19,7 @@ const Filter = ({ filterData }) => {
             key={data.title}
           >
             <p
-              className={`text-[10px] mb:text-[14px]  ${
+              className={`text-[10px] mb:text-[14px] font-sohne ${
                 active === index && "text-orangeDefault"
               }`}
             >

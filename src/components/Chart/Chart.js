@@ -100,13 +100,13 @@ const Chart = ({ chartInputData }) => {
   return (
     <div className="w-full border border-gray0 rounded-[12px] pl-[24px] pr-[14px] pt-[32px] pb-[22px] h-[576px]">
       <div className="flex justify-between">
-        <h1 className="text-[18px] font-medium mb-[8px]">Page Views</h1>
+        <h1 className="text-[18px] font-medium mb-[8px] font-sohne">Page Views</h1>
         <div className="pr-[10px] cursor-pointer">
           <Icon name="info" />
         </div>
       </div>
-      <p className="text-[12px] text-gray500 mb-[24px]">All Time</p>
-      <p className=" text-[24px] md:text-[48px] font-semibold">500</p>
+      <p className="text-[12px] text-gray500 mb-[24px] font-sohne">All Time</p>
+      <p className=" text-[24px] md:text-[48px] font-semibold font-sohne">500</p>
       <div className="h-[75%]">
         <Line options={options} data={data} />
       </div>

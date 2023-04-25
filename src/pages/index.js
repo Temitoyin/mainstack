@@ -54,14 +54,14 @@ const Home = () => {
       <main className="pb-[44px]">
         <div className="flex items-center justify-between mb-[23px]">
           <div>
-            <h1 className=" text-[18px] mb:text-[24px] font-semibold mb-[10px]">
+            <h1 className=" text-[18px] mb:text-[24px] font-semibold mb-[10px] font-sohne">
               Good morning, Blessing ⛅️
             </h1>
-            <p className="text[12px] mb:text-[14px]">
+            <p className="text[12px] mb:text-[14px] font-sohne">
               Check out your dashboard summary.
             </p>
           </div>
-          <a className="text-orangeDefault text-[14px] cursor-pointer">
+          <a className="text-orangeDefault text-[14px] cursor-pointer font-sohne">
             View analytics
           </a>
         </div>

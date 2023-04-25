@@ -23,7 +23,7 @@ const SideBar = () => {
             }`}
           >
             {data.header ? (
-              <p className="mt-[12px] mb-[20px] text-[12px] text-gray400">
+              <p className="mt-[12px] mb-[20px] text-[12px] text-gray400 font-sohne">
                 {data.header}
               </p>
             ) : (
@@ -33,7 +33,7 @@ const SideBar = () => {
                 </div>
 
                 <p
-                  className={`ml-[12px] ${
+                  className={`ml-[12px] font-sohne ${
                     active === index ? "text-orangeDefault" : "text-gray400"
                   }`}
                 >
