@@ -4,6 +4,13 @@ import { Doughnut } from "react-chartjs-2";
 import Icon from "../Icon/icon";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+/**
+ * Render Reports component
+ * @param {Array} chartData the chart data
+ * @param {string} title the title of the report page
+ * @param {string} type the type of chart
+ * @returns {React.Component} renders button component
+ */
 const Reports = ({ chartData, title, type }) => {
   const colors = ["blue", "purple", "green", "lightOrange", "orange"];
   const [chartCount, setChartCount] = useState([]);
@@ -54,17 +61,19 @@ const Reports = ({ chartData, title, type }) => {
     ],
   };
   return (
-    <div className="w-full border border-gray0 rounded-[12px] min-h-[326px] px-[24px] pt-[24px]">
-      <header className="flex justify-between">
-        <p>{title}</p>
-        <a className="text-orangeDefault cursor-pointer">View full reports</a>
+    <div className="w-full border border-gray0 rounded-[12px] h-full min-h-[326px] px-[16px] xl:px-[24px] pt-[24px]">
+      <header className="flex justify-between flex-col md:flex-row">
+        <p className="text-[14px] xl:text-[16px] font-semibold">{title}</p>
+        <a className="text-orangeDefault cursor-pointer text-[14px]">
+          View full reports
+        </a>
       </header>
-      <div className="flex mt-[52px]">
-        <div className="w-[50%]">
+      <div className="flex mt-[52px] flex-col sm:flex-row">
+        <div className="w-full md:w-[50%]">
           {chartData &&
             chartData.map((data, index) => (
               <div className="flex items-center mb-[19px]" key={index}>
-                <div className="w-[28px] h-[17px]">
+                <div className="w-[28px] h-[17px] flex-shrink-0">
                   <Icon
                     className="h-full w-full"
                     name={
@@ -74,17 +83,17 @@ const Reports = ({ chartData, title, type }) => {
                     }
                   />
                 </div>
-                <p className="px-[8px] capitalize">
+                <p className="  px-[4px] lg:px-[8px] text-[10px] lg:text-[16px] capitalize">
                   {type === "source" ? data.source : data.country}
                 </p>
-                <p className="pr-[12px] font-medium text-[16px]">{`${data.percent}%`}</p>
+                <p className="  pr-[10px] lg:pr-[12px] font-medium text-[12px] lg:text-[16px]">{`${data.percent}%`}</p>
                 <div
-                  className={`bg-${colors[index]} w-[12px] h-[12px] rounded-full `}
+                  className={`bg-${colors[index]} w-[12px] h-[12px] rounded-full flex-shrink-0`}
                 />
               </div>
             ))}
         </div>
-        <div className="w-[50%] max-h-[200px] flex justify-end">
+        <div className=" w-full md:w-[50%] max-h-[200px] flex flex-shrink-0 justify-center md:justify-end">
           {chartData && chartData.length > 0 && (
             <Doughnut data={data} options={options} />
           )}
