@@ -18,6 +18,12 @@ module.exports = {
       gray400: "#56616B",
       gray500: "#31373D",
     },
+    extend: {
+      fontFamily: {
+        sohne: ['var(--font-sohne)']
+      }
+  
+    }
   },
   plugins: [],
 };

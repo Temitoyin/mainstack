@@ -63,8 +63,8 @@ const Reports = ({ chartData, title, type }) => {
   return (
     <div className="w-full border border-gray0 rounded-[12px] h-full min-h-[326px] px-[16px] xl:px-[24px] pt-[24px]">
       <header className="flex justify-between flex-col md:flex-row">
-        <p className="text-[14px] xl:text-[16px] font-semibold">{title}</p>
-        <a className="text-orangeDefault cursor-pointer text-[14px]">
+        <p className="text-[14px] xl:text-[16px] font-semibold font-sohne">{title}</p>
+        <a className="text-orangeDefault cursor-pointer text-[14px] font-sohne">
           View full reports
         </a>
       </header>
@@ -83,12 +83,12 @@ const Reports = ({ chartData, title, type }) => {
                     }
                   />
                 </div>
-                <p className="  px-[4px] lg:px-[8px] text-[10px] lg:text-[16px] capitalize">
+                <p className="  px-[4px] lg:px-[8px] text-[10px] lg:text-[16px] capitalize font-sohne">
                   {type === "source" ? data.source : data.country}
                 </p>
-                <p className="  pr-[10px] lg:pr-[12px] font-medium text-[12px] lg:text-[16px]">{`${data.percent}%`}</p>
+                <p className="  pr-[10px] lg:pr-[12px] font-medium text-[12px] lg:text-[16px] font-sohne">{`${data.percent}%`}</p>
                 <div
-                  className={`bg-${colors[index]} w-[12px] h-[12px] rounded-full flex-shrink-0`}
+                  className={`bg-${colors[index]} w-[12px] h-[12px] rounded-full flex-shrink-0 font-sohne`}
                 />
               </div>
             ))}

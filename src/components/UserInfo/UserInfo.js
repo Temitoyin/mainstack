@@ -14,7 +14,7 @@ export const UserInfo = () => {
         <div className="w-[32px] h-[32px] rounded-full bg-gray-500 mr-[12px] overflow-hidden">
           <Image src={ProfileImage} object-fit="contain" alt="profile" />
         </div>
-        <p>Blessing Daniels</p>
+        <p className="font-sohne">Blessing Daniels</p>
       </div>
       <div className="cursor-pointer">
         <Icon name="more" />
