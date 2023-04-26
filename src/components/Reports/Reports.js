@@ -12,7 +12,11 @@ ChartJS.register(ArcElement, Tooltip, Legend);
  * @returns {React.Component} renders button component
  */
 const Reports = ({ chartData, title, type }) => {
-  const colors = ["blue", "purple", "green", "lightOrange", "orange"];
+  const colors = [ "#599EEA",
+  "#844FF6",
+  "#0FB77A",
+  "#FAB70A",
+  "#F09468",];
   const [chartCount, setChartCount] = useState([]);
   const [chartLabels, setChartLabels] = useState([]);
 
@@ -72,7 +76,7 @@ const Reports = ({ chartData, title, type }) => {
         <div className="w-full md:w-[50%]">
           {chartData &&
             chartData.map((data, index) => {
-              let color = colors[index];
+              let color = `bg-${colors[index]}`;
               return (
                 <div className="flex items-center mb-[19px]" key={index}>
                 <div className="w-[28px] h-[17px] flex-shrink-0">
@@ -89,9 +93,10 @@ const Reports = ({ chartData, title, type }) => {
                   {type === "source" ? data.source : data.country}
                 </p>
                 <p className="  pr-[10px] lg:pr-[12px] font-medium text-[12px] lg:text-[16px] font-sohne">{`${data.percent}%`}</p>
-                <div
-                  className={` bg-${color} w-[12px] h-[12px] rounded-full flex-shrink-0`}
-                />
+                <span
+                  className={` w-[12px] h-[12px] rounded-full flex-shrink-0`}
+                  style={ {backgroundColor: `${colors[index]}`}}
+                ></span>
               </div>
               )
               
