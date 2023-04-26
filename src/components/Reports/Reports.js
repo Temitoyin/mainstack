@@ -71,8 +71,10 @@ const Reports = ({ chartData, title, type }) => {
       <div className="flex mt-[52px] flex-col sm:flex-row">
         <div className="w-full md:w-[50%]">
           {chartData &&
-            chartData.map((data, index) => (
-              <div className="flex items-center mb-[19px]" key={index}>
+            chartData.map((data, index) => {
+              let color = colors[index];
+              return (
+                <div className="flex items-center mb-[19px]" key={index}>
                 <div className="w-[28px] h-[17px] flex-shrink-0">
                   <Icon
                     className="h-full w-full"
@@ -88,10 +90,12 @@ const Reports = ({ chartData, title, type }) => {
                 </p>
                 <p className="  pr-[10px] lg:pr-[12px] font-medium text-[12px] lg:text-[16px] font-sohne">{`${data.percent}%`}</p>
                 <div
-                  className={`bg-${colors[index]} w-[12px] h-[12px] rounded-full flex-shrink-0 font-sohne`}
+                  className={` bg-${color} w-[12px] h-[12px] rounded-full flex-shrink-0`}
                 />
               </div>
-            ))}
+              )
+              
+})}
         </div>
         <div className=" w-full md:w-[50%] max-h-[200px] flex flex-shrink-0 justify-center md:justify-end">
           {chartData && chartData.length > 0 && (
